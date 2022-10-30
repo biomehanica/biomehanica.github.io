@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "gulp",
     "prod": "gulp --prod",
-	"deploy": "gulp build && gh-pages -d build"
+    "deploy": "gulp build && gh-pages -d build"
   },
   "author": "Анна А",
   "license": "ISC",
