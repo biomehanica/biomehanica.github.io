@@ -1,7 +1,27 @@
+$font-stack: 'VictorMono';
+$primary-color: #000;
+$accent-color: #2196f3;
+
 body {
   margin: 0;
-  background-color: black;
+  background-color: $primary-color;
   color: #fff;
-  font-family: 'VictorMono';
+  font-family: $font-stack;
   line-height: normal;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li { display: inline-block; }
+
+  a {
+	color: $accent-color
+  }
+
+  .page-wrapper {
+	padding: 0 25px;
+  }
 }
