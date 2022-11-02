@@ -37,6 +37,7 @@
     "yargs": "^17.0.1"
   },
   "dependencies": {
+    "gsap": "^3.11.3",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-csso": "^4.0.1",
     "gulp-group-css-media-queries": "^1.2.2",
