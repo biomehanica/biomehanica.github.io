@@ -16,3 +16,5 @@ Example:
 @include font-face('VictorMono', '../fonts/VictorMono-Regular', null, null, woff2 woff);
 @include font-face('VictorMono', '../fonts/VictorMono-Light', 300, null, woff2 woff);
 @include font-face('VictorMono', '../fonts/VictorMono-Medium', 500, null, woff2 woff);
+@include font-face('VictorMono', '../fonts/VictorMono-Bold', 700, null, woff2 woff);
+@include font-face('VictorMono', '../fonts/VictorMono-SemiBold', 600, null, woff2 woff);

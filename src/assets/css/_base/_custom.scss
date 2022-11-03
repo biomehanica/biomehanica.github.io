@@ -1,29 +1,31 @@
 .bottom-block {
 	height: 300px;
-	margin-top: 500px;
-	margin-bottom: 10%;
+	margin-top: 100px;
+	margin-bottom: 100px;
 	display: flex;
 	width: 100%;
-	color: #ffffff;
-	background-color: darkblue;
+	color: #000000;
+	background-color: #ffffff;
 	align-items: center;
 	justify-content: center;
+	font-size: 30px;
+	font-weight: 600;
 }
 .scrolling-text {
 	overflow: hidden;
 	width: 100%;
-	height: 100vh;
+	height: auto;
 	display: flex;
-	// justify-content: center;
 	align-items: center;
 	background-color: black;
 	.rail {
 	  display: flex;
-	  h4 {
+	  margin-top: 100px;
+	  margin-bottom: 100px;
+	  .rail_item {
 		white-space: nowrap;
 		font-size: 200px;
-		font-weight: 900;
-		letter-spacing: ls(120);
+		font-weight: 700;
 		line-height: 1em;
 		margin: 0 2rem 0 0;
 		color: white;

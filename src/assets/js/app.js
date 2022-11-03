@@ -13,6 +13,12 @@ for (let smoothLink of smoothLinks) {
 
 import {gsap} from "gsap"
 
+// get other plugins:
+import Observer from "gsap/Observer";
+
+gsap.registerPlugin(Observer);
+
+
 function horizontalLoop(items, config) {
 	items = gsap.utils.toArray(items);
 	config = config || {};
@@ -72,24 +78,25 @@ function horizontalLoop(items, config) {
 }
 
 
-const scrollingText = gsap.utils.toArray('.rail h4');
+const scrollingText = gsap.utils.toArray('.rail_item');
 
 const tl = horizontalLoop(scrollingText, {
   repeat: -1,
 });
 
+
 Observer.create({
-  onChangeY(self) {
-    let factor = 1;
-    if (self.deltaY < 0) {
-      factor = -1;
-    } 
-    gsap.timeline({
-      defaults: {
-        ease: "none",
-      }
-    })
-      .to(tl, { timeScale: factor * 2.5, duration: 0.15 })
-      .to(tl, { timeScale: factor * 1, duration: 1 }, "+=0.3");
-  }
+	onChangeY(self) {
+	  let factor = 1;
+	  if (self.deltaY < 0) {
+		factor = -1;
+	  } 
+	  gsap.timeline({
+		defaults: {
+		  ease: "none",
+		}
+	  })
+		.to(tl, { timeScale: factor * 2.5, duration: 0.15 })
+		.to(tl, { timeScale: factor * 1, duration: 1 }, "+=0.3");
+	}
 });
