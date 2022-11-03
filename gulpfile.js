@@ -25,8 +25,7 @@ const ttf2woff = require('gulp-ttf2woff');
 const ttf2woff2 = require('gulp-ttf2woff2');
 const fonter = require('gulp-fonter');
 const del = require('del');
-var ghPages = require('gulp-gh-pages');
-
+const ghPages = require('gh-pages');
 /**
  * Include projectConfig file
  */
@@ -299,7 +298,7 @@ exports.default = gulp.series(
     gulp.parallel(browsersync, watch)
 );
 
-gulp.task('deploy', function() {
-	return gulp.src('./dist/**/*')
-	  .pipe(ghPages());
-});
+function deploy(cb) {
+	ghPages.publish((process.cwd(), './dist'), cb);
+  }
+exports.deploy = deploy;
