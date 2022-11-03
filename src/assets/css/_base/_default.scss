@@ -1,6 +1,6 @@
 $font-stack: 'VictorMono';
 $primary-color: #000;
-$accent-color: #df0000;
+$accent-color: #2196f3;
 
 body {
   margin: 0;
@@ -8,6 +8,14 @@ body {
   color: #ffffff;
   font-family: $font-stack;
   line-height: normal;
+
+  h1 {
+	font-weight: 700;
+  }
+
+  h2, h3 {
+	font-weight: 600;
+  }
 
   ul {
     margin: 0;
@@ -20,7 +28,15 @@ body {
   a {
 	color: $accent-color
   }
-
+  
+  header {
+	display: flex;
+	align-items: center;
+	padding: 30px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #ffffff;
+  }
+  
   .page-wrapper {
 	padding: 0 25px;
   }
